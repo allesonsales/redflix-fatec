@@ -14,9 +14,16 @@ function Filme () {
     const favorito = favoritos.some(item => item.id === filme?.id)
 
     function guardarFilmeFavorito() {
-        const novoFavoritos = favorito 
-        ? favoritos.filter((favorito) => favorito.id !== filme.id)
-        : [...favoritos, filme]
+        let novoFavoritos
+
+        if (favorito) {
+            novoFavoritos =  favoritos.filter((favorito) => favorito.id !== filme.id)
+            window.alert("Removido dos favoritos com sucesso.")
+        } else {
+            novoFavoritos = [...favoritos, filme]
+            window.alert("Filme adicionado aos favoritos.")
+        }
+      
 
         setFavoritos(novoFavoritos)
 
