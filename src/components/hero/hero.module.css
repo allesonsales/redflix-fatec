@@ -1,0 +1,123 @@
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    z-index: 10;
+
+    i {
+      cursor: pointer;
+      color: var(--cor-secundaria);
+      font-size: 2rem;
+      transition: transform 0.2s ease-in-out;
+    }
+
+    i:hover {
+      transform: scale(1.1);
+    }
+  }
+}
+
+.filmeContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+    display: block;
+    border-radius: 25px;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(
+        to right,
+        rgba(20, 20, 20, 0.95) 0%,
+        rgba(20, 20, 20, 0.6) 45%,
+        rgba(20, 20, 20, 0.1) 100%
+      ),
+      linear-gradient(to top, #141414 0%, transparent 45%);
+  }
+}
+
+.conteudoContainer {
+  position: absolute;
+  z-index: 2;
+  left: 10%;
+  bottom: 10%;
+  max-width: 600px;
+  color: var(--cor-secundaria);
+
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    color: #fff;
+  }
+
+  p {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--cor-secundaria);
+    margin-bottom: 1.5rem;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+  }
+
+  .buttonContainer {
+    display: flex;
+    gap: 12px;
+  }
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    width: auto;
+    height: auto;
+    padding: 0.8rem 1.5rem;
+    background-color: white;
+    color: black;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+
+    i {
+      color: black;
+      font-size: 1.2rem;
+    }
+
+    &:hover {
+      background-color: #d9d9d9;
+    }
+  }
+
+  .informacoes {
+    background-color: var(--cor-secundaria);
+  }
+}

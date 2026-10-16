@@ -1,0 +1,34 @@
+.header {
+  width: 100%;
+  padding: 2rem;
+
+  img {
+    width: 100px;
+  }
+  nav {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+
+    li {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--link);
+      }
+
+      a:hover {
+        color: var(--link-hover);
+        transform: scale(1.1);
+        transition: ease-in-out 0.2s;
+      }
+    }
+  }
+}

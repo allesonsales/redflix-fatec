@@ -1,0 +1,25 @@
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 2rem;
+  color: #fff;
+
+  span {
+    font-size: 0.8rem;
+  }
+}
+
+.social {
+  display: flex;
+  gap: 24px;
+
+  i {
+    cursor: pointer;
+    transition: ease-in-out 0.2s;
+  }
+
+  i:hover {
+    transform: scale(1.1);
+  }
+}

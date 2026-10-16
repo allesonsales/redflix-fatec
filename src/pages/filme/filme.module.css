@@ -1,0 +1,73 @@
+.filmeContainer {
+  width: 100%;
+  color: #fff;
+  position: relative;
+
+  img {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+
+  .conteudoContainer {
+    position: absolute;
+    bottom: 0;
+    color: #fff;
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    h1 {
+      margin-bottom: 1rem;
+    }
+
+    background: linear-gradient(
+      to top,
+      rgba(20, 20, 20, 0.95) 0%,
+      rgba(20, 20, 20, 0.6) 85%,
+      rgba(20, 20, 20, 0.1) 100%
+    );
+  }
+}
+
+.generos {
+  display: flex;
+  gap: 1rem;
+  color: var(--cor-secundaria);
+  margin-bottom: 1rem;
+}
+
+.leftContainer {
+  width: 100%;
+}
+
+.descricaoContainer {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    max-width: 80%;
+  }
+  button {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:hover {
+      i {
+        transform: scale(1.1);
+      }
+    }
+
+    i {
+      color: var(--link-hover);
+      transition: ease-in-out 0.3s;
+    }
+  }
+}
