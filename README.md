@@ -1,16 +1,17 @@
-# React + Vite
+# REDFLIX
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Tela inicial](./public/site.png)
 
-Currently, two official plugins are available:
+## Componetização
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Foram criados componentes reutilizáveis para organizar a estrutura do site, facilitar a manutenção do código e evitar duplicações.
 
-## React Compiler
+### FilmeCard
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- O filmeCard é responsável pela exibição dos filmes nas páginas catálogos e favoritos. Cada filme da lista é representado por um filmeCard, as informações são recebidas por meio de Props. Permitindo reutilizar o mesmo componene em diversas partes da aplicação
 
-## Expanding the ESLint configuration
+### Hero
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- O componente Hero é responsável pela renderização dos filmes na página home. Cada filme em destaque é representado por um Hero, os filmes são buscados através de um useEffect e renderizados através de um map em cima de uma lista de filmes.
+
+* Além desses componentes foram criados também os componentes header e footer que são utilizados durante toda a aplicação.
